@@ -1,0 +1,11 @@
+.list-title{
+    visibility: hidden;
+}
+
+.list-title2{
+    visibility: hidden;
+}
+
+.show-title{
+    visibility: visible;
+}
