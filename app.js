@@ -115,7 +115,7 @@ function quoteDisplay() {
     // let quote = document.createTextNode("p");
     // element.appendChild(quote);
 
-    element.innerHTML = `<h2>${quoteChoice}</h2>`;
+    element.innerHTML = `<h2><em>${quoteChoice}</em></h2>`;
     quoteArea.appendChild(element);
 }
 

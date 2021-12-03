@@ -1,11 +1,44 @@
-.list-title{
+body {
+    background: lightskyblue;
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+
+
+
+#titleQuote {
+    text-align: center;
+}
+
+.list-title {
     visibility: hidden;
 }
 
-.list-title2{
+.list-title2 {
     visibility: hidden;
 }
 
-.show-title{
+.show-title {
     visibility: visible;
+}
+
+.container {
+    padding: 10px;
+    font-size: 20px;
+    height: auto;
+    max-width: auto;
+    background: rgb(233, 199, 49);
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 1fr 1fr ;
+    grid-gap: 10px;
+    
+    grid-template-areas: 
+        "content product product"
+        "content product product"
+        "advert content advert";
+}
+
+.quote-container {
+    text-align: center;
 }
