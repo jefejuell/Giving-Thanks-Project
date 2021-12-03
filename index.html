@@ -1,11 +1,38 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Giving Thanks</title>
         <link rel="stylesheet" href="styles.css">
+
+        <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/navbars/">  
+
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="./bootstrap.min.css">
     </head>
 
     <body>
+        <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="https://jefejuell.github.io/Giving-Thanks-Project/">
+                <!-- <img src="./images/StickUpLogo.jpeg" alt="" width="30" height="30" class="d-inline-block align-text-bottom"> -->
+                GivTkx
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarTogglerDemo01"> 
+                <div class="navbar-nav">
+                  <a class="nav-link active" aria-current="page" href="https://jefejuell.github.io/Giving-Thanks-Project/">Home</a>
+                  <a class="nav-link active" aria-current="page" href="https://jefejuell.github.io/Giving-Thanks-Project/giveBack.html">Services</a>
+                  <a class="nav-link active" aria-current="page" href="https://jefejuell.github.io/StickUp-WebsiteProject/ContactUs.html">Pricing & Contact</a>
+                  <a class="nav-link active" aria-current="page" href="https://jefejuell.github.io/StickUp-WebsiteProject/eCommerce.html">Logo Gear</a>
+                </div>  
+              </div>
+            </div>
+        </nav>
+
         <div class="gratitude-container">
             <h2>"Gratitude is the open fount to forgiveness."</h2>
 
@@ -38,6 +65,9 @@
 
         <p>What are the benefits of Gratitude?</p>
         <a href="./giveBack.html"><h3>How can I express my gratitude?</h3></a>
+
+        <!-- Bootstrap NAV Bar -->
+        <script src="./bootstrap.bundle.min.js"></script>
         <script src="app.js"></script>
     </body>
 </html>
