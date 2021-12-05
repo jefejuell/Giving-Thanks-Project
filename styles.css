@@ -1,10 +1,12 @@
 body {
     background: lightskyblue;
-    padding-top: 40px;
+    padding-top: 20px;
     padding-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 10px;
 }
-
-
 
 #titleQuote {
     text-align: center;
@@ -26,12 +28,12 @@ body {
     padding: 10px;
     font-size: 20px;
     height: auto;
-    max-width: auto;
-    background: rgb(233, 199, 49);
+    max-width: 100%;
+    background: rgb(241, 214, 93);
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: 1fr 1fr ;
-    grid-gap: 10px;
+    grid-gap: 30px;
     
     grid-template-areas: 
         "content product product"
@@ -42,3 +44,58 @@ body {
 .quote-container {
     text-align: center;
 }
+
+.btn-like {
+    /* display: inline-block; */
+    position: relative;
+    font-size: 32px;
+    cursor: pointer;
+    /* border: 1px solid black; */
+}
+.btn-like::before {
+      font-size: 3em;
+      color: #000;
+      content: '♥';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%)
+}
+.btn-like::after {
+      font-size: 3em;
+      color: #ff3252;
+      content: '♥';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      transition: transform 0.2s
+}
+.btn-like.liked::after {
+      transform: translate(-50%, -50%) scale(1.1)
+}
+
+.footer {
+    height: 5vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #cdd1d6;
+    background-color: #dee1e5;
+    font-weight: 300;
+    color: #555;
+    position: relative;
+  }
+  .footer span {
+    margin-left: 2px;
+    font-weight: 400;
+    cursor: pointer;
+    color: rgb(44, 44, 124);
+  }
+  .footer span a:link,
+  .footer span a:visited {
+    color: currentColor;
+    text-decoration: none;
+  }
+  

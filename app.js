@@ -27,6 +27,7 @@ const gratitudeReason = document.querySelector(".form-reason");
 const reasonArea = document.querySelector(".reason-container");
 const btnQuote = document.querySelector(".btn-quote");
 const quoteArea = document.querySelector(".quote-container");
+const btnLike = document.querySelector(".btn-like");
 
 /*****Event Listeners*****/
 gratitudeForm.addEventListener("submit", addItem);
@@ -36,6 +37,10 @@ gratitudeReason.addEventListener("submit", addReason);
 btnReset.addEventListener("click", resetList);
 
 btnQuote.addEventListener("click", quoteDisplay);
+
+btnLike.addEventListener("click", e => {
+    e.currentTarget.classList.toggle("liked");
+});
 
 /****Functions******/
 function addItem(e) {
@@ -119,3 +124,6 @@ function quoteDisplay() {
     quoteArea.appendChild(element);
 }
 
+function displayAlert() {
+    
+}
