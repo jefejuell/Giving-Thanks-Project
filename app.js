@@ -21,6 +21,7 @@ const gratitudeForm = document.querySelector(".form-gratitude");
 const listInput = document.getElementById("gratitude-entry");
 const listArea = document.querySelector(".list-container");
 const btnSubmit = document.querySelector(".btn-submit");
+
 const btnReset = document.querySelector(".btn-reset");
 const reasonInput = document.getElementById("reason");
 const gratitudeReason = document.querySelector(".form-reason");
@@ -93,15 +94,23 @@ function resetDefaults() {
 
 function resetList() {
     const items = document.querySelectorAll(".list-item");
+    console.log(items);
     if (items.length > 0) {
         items.forEach(function (item) {
             listArea.removeChild(item);
         });
-        const areaTitles = document.querySelectorAll(".list-title");
-        areaTitles.forEach(function (title){
-            title.classList.remove("show-title");
+    }
+    const reasons = document.querySelectorAll(".reason-item");
+    console.log(reasons);
+    if (reasons.length > 0) {
+        reasons.forEach(function (reason) {
+            reasonArea.removeChild(reason);
         });
-    }  
+    }    
+    const areaTitles = document.querySelectorAll(".list-title");
+    areaTitles.forEach(function (title){
+        title.classList.remove("show-title");
+        });  
 }
 
 function quoteDisplay() {
@@ -125,5 +134,5 @@ function quoteDisplay() {
 }
 
 function displayAlert() {
-    
+    console.log("display Alert");
 }
