@@ -45,15 +45,33 @@ body {
     text-align: center;
 }
 
+.alert {
+    text-align: center;
+    align-items: center;
+}
+
+.alert-danger {
+    color: rgb(216, 20, 20);
+    background: rgb(216, 130, 130);
+}
+
+.alert-success {
+    color: rgb(4, 211, 4);
+    background: rgb(138, 211, 138);
+}
+
 .btn-like {
-    /* display: inline-block; */
+    /* align-content: center; */
+    display: inline-block;
     position: relative;
+    top: 40%;
+    left: 5%;
     font-size: 32px;
     cursor: pointer;
     /* border: 1px solid black; */
 }
 .btn-like::before {
-      font-size: 3em;
+      font-size: 2em;
       color: #000;
       content: '♥';
       position: absolute;
@@ -62,7 +80,7 @@ body {
       transform: translate(-50%, -50%)
 }
 .btn-like::after {
-      font-size: 3em;
+      font-size: 2em;
       color: #ff3252;
       content: '♥';
       position: absolute;
@@ -73,6 +91,12 @@ body {
 }
 .btn-like.liked::after {
       transform: translate(-50%, -50%) scale(1.1)
+}
+
+#favico-text {
+    position: relative;
+    left: 12%;
+    /* margin-right: -50%; */ 
 }
 
 .footer {

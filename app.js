@@ -21,7 +21,7 @@ const gratitudeForm = document.querySelector(".form-gratitude");
 const listInput = document.getElementById("gratitude-entry");
 const listArea = document.querySelector(".list-container");
 const btnSubmit = document.querySelector(".btn-submit");
-
+const alert = document.querySelector(".alert");
 const btnReset = document.querySelector(".btn-reset");
 const reasonInput = document.getElementById("reason");
 const gratitudeReason = document.querySelector(".form-reason");
@@ -46,7 +46,7 @@ btnLike.addEventListener("click", e => {
 /****Functions******/
 function addItem(e) {
     e.preventDefault();
-    showTitle();
+    showTitles();
     // const areaTitle = document.querySelector(".list-title");
     // areaTitle.classList.add("show-title");
     const itemTitle = listInput.value;
@@ -59,28 +59,26 @@ function addItem(e) {
         window.alert("Please enter gratitude.");
     }
     resetDefaults();
+    displayAlert("Gratitude added successfully. Please add a reason for this gratitude.", "success");
 }
 
 function addReason(e) {
     e.preventDefault();
-    showTitle();
-    // const areaTitle = document.querySelector(".list-title2");
-    // areaTitle.classList.add("show-title");
+    showTitles();
     const reason = reasonInput.value;
     if (reason.length != 0) {
         const element = document.createElement("article");
         element.classList.add("reason-item");
         element.innerHTML = `<li class="title2">${reason}</li>`;
         reasonArea.appendChild(element);
-    // const areaTitle = document.querySelector(".list-title2");
-    // areaTitle.classList.add("show-title");
     } else {
         window.alert("Please enter reason.")
     }
     resetDefaults();
+    displayAlert("Reason added successfully", "success");
 }
 
-function showTitle() {
+function showTitles() {
     const areaTitles = document.querySelectorAll(".list-title");
     areaTitles.forEach(function (title) {
         title.classList.add("show-title");
@@ -111,6 +109,8 @@ function resetList() {
     areaTitles.forEach(function (title){
         title.classList.remove("show-title");
         });  
+    
+    displayAlert("Lists reset", "danger");
 }
 
 function quoteDisplay() {
@@ -131,8 +131,15 @@ function quoteDisplay() {
 
     element.innerHTML = `<h2><em>${quoteChoice}</em></h2>`;
     quoteArea.appendChild(element);
+    btnLike.classList.remove("liked");
 }
 
-function displayAlert() {
-    console.log("display Alert");
+function displayAlert(text, action) {
+    alert.textContent = text;
+    alert.classList.add(`alert-${action}`);
+
+    setTimeout(function() {
+        alert.textContent = "";
+        alert.classList.remove(`alert-${action}`);
+    }, 3000);
 }
