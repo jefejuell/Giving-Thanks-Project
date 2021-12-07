@@ -93,10 +93,11 @@ body {
       transform: translate(-50%, -50%) scale(1.1)
 }
 
-#favico-text {
+#btn-like-text {
     position: relative;
     left: 12%;
-    /* margin-right: -50%; */ 
+    
+    margin-right: -50%;  
 }
 
 .footer {
@@ -165,3 +166,9 @@ body {
       font-size: 3.5rem;
     }
   }
+
+  @media (max-width: 768px) {
+    .bd-placeholder-img-sm {
+        font-size: 0.5rem;
+      }
+    }
