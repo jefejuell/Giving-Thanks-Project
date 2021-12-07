@@ -16,7 +16,8 @@ const quotes = [
     "Let us come into his presence with thanksgiving; let us make a joyful noise to him with songs of praise! ~ Psalm 95:2",
     "Rooted and built up in him and established in the faith, just as you were taught, abounding in thanksgiving.  ~ Colossians 2:7",
     "The Lord is my strength and my shield; my heart trusts in him, and he helps me. My heart leaps for joy, and with my song I praise him.  ~ Psalm 28:7", 
-    "It's not happiness that brings us gratitude. It's gratitude that brings us happiness."
+    "It's not happiness that brings us gratitude. It's gratitude that brings us happiness.",
+    "Darkness cannot drive out darkness, only light can do that. Hate cannot drive out hate, only love can do that. ~Martin Luther King, Jr."
 ]
 const gratitudeForm = document.querySelector(".form-gratitude");
 const listInput = document.getElementById("gratitude-entry");

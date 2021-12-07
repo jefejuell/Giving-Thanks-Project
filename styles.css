@@ -44,17 +44,18 @@ body {
     flex-grow: inherit;
 }
 
-/* .container {
+.container2 {
     padding: 10px;
     font-size: 20px;
+    box-sizing: border-box;
     height: auto;
     max-width: 100%;
     background: rgba(93, 174, 241, 0.74);
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 2fr 1fr ;
+    grid-template-rows: 1fr 1fr ;
     grid-gap: 30px;
-} */
+}
 
 .quote-container {
     text-align: center;
@@ -158,7 +159,7 @@ body {
     text-decoration: none;
   }
 
-  .bridge-container {
+  /* .bridge-container {
       display: flex;
       height: 1000px;
       padding: 10px;
@@ -171,7 +172,7 @@ body {
   .links {
       width: 50%;
       height: 50%;
-  }
+  } */
 
   /* Bootstrap selectors */
   .bd-placeholder-img {
