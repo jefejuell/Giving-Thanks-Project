@@ -1,6 +1,6 @@
 body {
     background: lightskyblue;
-    background-image: url("./mountainbasincreek-medium.jpeg");
+    background-image: url("./images/mountainbasincreek-medium.jpeg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -11,6 +11,11 @@ body {
     min-height: 100vh;
     margin: 10px;
 }
+
+a:visited {
+    color: rgb(44, 44, 124);
+    text-decoration: none;
+  }
 
 #titleQuote {
     text-align: center;
@@ -159,6 +164,19 @@ body {
     text-decoration: none;
   }
 
+  .center-intro {
+    height: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-top: 1px solid #cdd1d6;
+    background-color: #dee1e5;
+    font-weight: 300;
+    color: #555;
+    position: relative;
+  }
   /* .bridge-container {
       display: flex;
       height: 1000px;
