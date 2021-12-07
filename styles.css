@@ -36,8 +36,8 @@ body {
     height: auto;
     max-width: 100%;
     background: rgba(93, 174, 241, 0.74);
-    justify-content: center;
-    align-items: center;
+    justify-content:space-between;
+    align-items: baseline;
     flex-basis: inherit;
     flex-wrap: wrap;
     flex-shrink: inherit;
