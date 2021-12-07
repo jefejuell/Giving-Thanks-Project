@@ -1,6 +1,9 @@
 body {
     background: lightskyblue;
     background-image: url("./mountainbasincreek-medium.jpeg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
     padding-top: 20px;
     padding-bottom: 20px;
     justify-content: center;
@@ -26,25 +29,22 @@ body {
     visibility: visible;
 }
 
-/* .container {
+.container {
+    display: flex;
     padding: 10px;
     font-size: 20px;
-    height: 600px;
+    height: auto;
     max-width: 100%;
-    background: rgb(241, 214, 93);
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 1fr 1fr ;
-    grid-gap: 30px;
-    
-    grid-template-areas: 
-        "content product product"
-        "content product product"
-        "advert content advert";
-} */
+    background: rgba(93, 174, 241, 0.74);
+    justify-content: center;
+    align-items: center;
+    flex-basis: inherit;
+    flex-wrap: wrap;
+    flex-shrink: inherit;
+    flex-grow: inherit;
+}
 
-.container {
-    /* display: flex; */
+/* .container {
     padding: 10px;
     font-size: 20px;
     height: auto;
@@ -54,7 +54,7 @@ body {
     grid-template-columns: 50% 50%;
     grid-template-rows: 2fr 1fr ;
     grid-gap: 30px;
-}
+} */
 
 .quote-container {
     text-align: center;
