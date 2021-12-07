@@ -8,6 +8,11 @@
         <!-- Mapbox information -->
         <link href="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css" rel="stylesheet">
         <script src="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js"></script>
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="bootstrap.min.css">
+        <!-- JSQuery code for Navbar
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script> -->
+        <script src="https://code.jquery.com/jquery.min.js"></script>
     </head>
 
     <body>
@@ -18,7 +23,7 @@
                 $("#nav-placeholder").replaceWith(data);
             });
         </script>
-        
+
         <div class="center-container">
             <h1 id="titleQuote">"Let's build bridges not walls."<br><span>~Martin Luther King, Jr.</span></h1>
         </div>
@@ -67,31 +72,15 @@
                
             <!-- </div> -->
         </div>
+        
         <!-- Load the `mapbox-gl-geocoder` plugin. -->
         <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.2/mapbox-gl-geocoder.min.js"></script>
         <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.2/mapbox-gl-geocoder.css" type="text/css">
 
-        <script>
-            mapboxgl.accessToken = 'pk.eyJ1IjoiamVmZWp1ZWxsIiwiYSI6ImNrdGZ6aTlpaTBkOWczMm5sMDdja3UwanYifQ.0bEdPWVZftSkB8c9ZUSBOw';
-            const map = new mapboxgl.Map({
-                container: 'map',
-                style: 'mapbox://styles/mapbox/streets-v11',
-                center: [-90.370760, 38.636210],
-                zoom: 9
-            });
+        <script src="map.js"></script>
 
-            // Add the control to the map.
-            map.addControl(
-                new MapboxGeocoder({
-                    accessToken: mapboxgl.accessToken,
-                    mapboxgl: mapboxgl
-                })
-            );
-
-            //Adds navigation controls
-            map.addControl(new mapboxgl.NavigationControl());
-        </script>
-
+        <!-- Bootstrap NAV Bar -->
+        <script src="./bootstrap.bundle.min.js"></script>
     </body>
 
 </html>
