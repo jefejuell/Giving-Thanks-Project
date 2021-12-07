@@ -12,8 +12,13 @@ body {
     margin: 10px;
 }
 
-a:visited {
+a{
     color: rgb(44, 44, 124);
+    font-weight: 500;
+    text-decoration: none;
+}
+a:visited {
+    color: currentColor;
     text-decoration: none;
   }
 
@@ -40,13 +45,14 @@ a:visited {
     font-size: 20px;
     height: auto;
     max-width: 100%;
-    background: rgba(93, 174, 241, 0.74);
+    background: rgba(93, 174, 241, 0.822);
     justify-content:space-between;
     align-items: baseline;
     flex-basis: inherit;
     flex-wrap: wrap;
     flex-shrink: inherit;
     flex-grow: inherit;
+    gap: 20px;
 }
 
 .container2 {
@@ -191,6 +197,11 @@ a:visited {
       width: 50%;
       height: 50%;
   } */
+
+  #contactForm {
+      background-color: lightskyblue;
+      padding: 10px;
+  }
 
   /* Bootstrap selectors */
   .bd-placeholder-img {
