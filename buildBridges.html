@@ -11,6 +11,14 @@
     </head>
 
     <body>
+        <div id="nav-placeholder">
+        </div>
+        <script>
+            $.get("nav.html", function(data){
+                $("#nav-placeholder").replaceWith(data);
+            });
+        </script>
+        
         <div class="center-container">
             <h1 id="titleQuote">"Let's build bridges not walls."<br><span>~Martin Luther King, Jr.</span></h1>
         </div>
