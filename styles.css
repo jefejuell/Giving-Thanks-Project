@@ -122,4 +122,46 @@ body {
     color: currentColor;
     text-decoration: none;
   }
+
+  #gratitude-link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: darkblue;
+  }
+  #gratitude-link a:link,
+  #gratitude-link a:visited {
+    justify-content: center;
+    color: currentColor;
+    text-decoration: none;
+  }
+
+  .bridge-container {
+      display: flex;
+      height: 1000px;
+      padding: 10px;
+  }
+  #map {
+      width: 50%;
+      height: 50%;
+  }
   
+  .links {
+      width: 50%;
+      height: 50%;
+  }
+
+  /* Bootstrap selectors */
+  .bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
