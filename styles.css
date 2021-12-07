@@ -1,5 +1,6 @@
 body {
     background: lightskyblue;
+    background-image: url("./mountainbasincreek-medium.jpeg");
     padding-top: 20px;
     padding-bottom: 20px;
     justify-content: center;
@@ -10,6 +11,7 @@ body {
 
 #titleQuote {
     text-align: center;
+    background-color: rgba(4, 211, 4, 0.459);
 }
 
 .list-title {
@@ -24,10 +26,10 @@ body {
     visibility: visible;
 }
 
-.container {
+/* .container {
     padding: 10px;
     font-size: 20px;
-    height: auto;
+    height: 600px;
     max-width: 100%;
     background: rgb(241, 214, 93);
     display: grid;
@@ -39,6 +41,19 @@ body {
         "content product product"
         "content product product"
         "advert content advert";
+} */
+
+.container {
+    /* display: flex; */
+    padding: 10px;
+    font-size: 20px;
+    height: auto;
+    max-width: 100%;
+    background: rgba(93, 174, 241, 0.74);
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 2fr 1fr ;
+    grid-gap: 30px;
 }
 
 .quote-container {
@@ -125,10 +140,16 @@ body {
   }
 
   #gratitude-link {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: darkblue;
+    height: 5vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #cdd1d6;
+    background-color: #dee1e5;
+    font-weight: 300;
+    color: darkblue;
+    position: relative;
   }
   #gratitude-link a:link,
   #gratitude-link a:visited {
