@@ -61,6 +61,7 @@
                 <button class="btn-like"></button>
                 <p></p>
                 <h2 id="btn-like-text">Favorite</h2>
+
             </div>
         </div>
 
@@ -71,8 +72,13 @@
         <script src="app.js"></script>
     </body>
 
-    <footer class="footer"><span><em><b>Invest in Gratitude.</b></em></span> This website powered by <span><a href="https://jefejuell.github.io" target="_blank">JJDev</a></span> </footer>
-
+    <div id="footer-placeholder">
+    </div>
+    <script>
+        $.get("footer.html", function(data){
+            $("#footer-placeholder").replaceWith(data);
+        });
+    </script>
 </html>
 
  <!-- IDEAS - 

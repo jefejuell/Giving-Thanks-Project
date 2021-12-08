@@ -31,6 +31,7 @@ const reasonArea = document.querySelector(".reason-container");
 const btnQuote = document.querySelector(".btn-quote");
 const quoteArea = document.querySelector(".quote-container");
 const btnLike = document.querySelector(".btn-like");
+const favoriteArea = document.querySelector(".favorite-container")
 
 /*****Event Listeners*****/
 gratitudeForm.addEventListener("submit", addItem);
@@ -43,6 +44,8 @@ btnQuote.addEventListener("click", quoteDisplay);
 
 btnLike.addEventListener("click", e => {
     e.currentTarget.classList.toggle("liked");
+    let element = document.querySelector("quote-item");
+    favoriteArea.appendChild(element);
 });
 
 /****Functions******/
