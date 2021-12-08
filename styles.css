@@ -4,6 +4,7 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     padding-top: 20px;
     padding-bottom: 20px;
     justify-content: center;
@@ -52,7 +53,7 @@ a:visited {
     flex-wrap: wrap;
     flex-shrink: inherit;
     flex-grow: inherit;
-    gap: 20px;
+    gap: 50px;
 }
 
 .container2 {
@@ -89,7 +90,8 @@ a:visited {
 
 #dragDiv {
     position: absolute;
-    left: 150px;
+    left: 50%;
+    top: 12%;
     background-color: rgba(117, 57, 29, 0.808);
     color: rgb(190, 174, 174);
     z-index: 8;
@@ -101,17 +103,18 @@ a:visited {
 #dragDivHeader {
     background-color: rgb(4, 112, 4);
     color: lightskyblue;
-    padding: 10px;
+    padding: 2px;
     cursor: move;
 } 
 
 .btn-like {
     /* align-content: center; */
-    display: inline-block;
+    /* display: inline-block; */
     position: relative;
-    top: 40%;
-    left: 5%;
-    font-size: 32px;
+    float: left;
+    /* top: 40%;
+    left: 5%; */
+    font-size: 20px;
     cursor: pointer;
     /* border: 1px solid black; */
 }

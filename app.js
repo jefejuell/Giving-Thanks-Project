@@ -32,6 +32,7 @@ const btnQuote = document.querySelector(".btn-quote");
 const quoteArea = document.querySelector(".quote-container");
 const btnLike = document.querySelector(".btn-like");
 const favoriteArea = document.querySelector(".favorite-container")
+const btnShare = document.querySelector(".btn-share")
 
 /*****Event Listeners*****/
 gratitudeForm.addEventListener("submit", addItem);
@@ -44,10 +45,12 @@ btnQuote.addEventListener("click", quoteDisplay);
 
 btnLike.addEventListener("click", e => {
     e.currentTarget.classList.toggle("liked");
-    let element = document.querySelector("quote-item");
-    favoriteArea.appendChild(element);
+    quoteLike();
 });
 
+btnShare.addEventListener("click", function(e) {
+
+})
 /****Functions******/
 function addItem(e) {
     e.preventDefault();
@@ -137,6 +140,11 @@ function quoteDisplay() {
     element.innerHTML = `<h2><em>${quoteChoice}</em></h2>`;
     quoteArea.appendChild(element);
     btnLike.classList.remove("liked");
+}
+
+function quoteLike() {
+let like = quoteArea.querySelector("quote-item");
+favoriteArea.appendChild(like);
 }
 
 function displayAlert(text, action) {

@@ -57,21 +57,37 @@
                 <article class="quote-item"><h2><em>This is the day that the Lord has made; let us rejoice and be glad in it. ~ Psalm 118:24"</em></h2></article>
             </div>
 
-            <div class="favorite-container">
-                <button class="btn-like"></button>
-                <p></p>
-                <h2 id="btn-like-text">Favorite</h2>
+            <div class="favorite-container" style="position:relative">
+                <h2 id="btn-like-text">
+                <button class="btn-like"></button>Favorite</h2>
+                <form action="mailto:?subject=Quote of the Day?body=I thought you would find this quote inspiring from GivingThanks." method="post" enctype="text/plain" id="subscribe" target="_blank">
+                    <button for="subscribe" class="btn-share">Share</button>
+                </form>
+            </div>
+
+            <div class="subscribe-container">
+                <h4> Receive Quote of the Day each day in your inbox</h4>
+                <form action="https://www.freecodecamp.com/email-submit">
+                    <input type="email" name="email" required>
+                    <input type="submit" value="Subscribe">
+                </form>
+            </div>
+
+            <div class="video-container" style="margin:auto;">
+                <h3 style="text-align: center;">Gratitude video for the kid in all of us!</h3>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Y3cpV_dnN_I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
 
             <div id ="dragDiv">  <!--Draggable container-->
                 <div id="dragDivHeader">Click to drop...</div>
-                    <p>Into the</p>
-                    <p>Gratitude</p>
+                    <p>gratitude in</p>
+                    <p>the Gratitude</p>
                     <p>Bucket</p>
             </div>
 
             <div class="bucket">
                 <img src="./images/Bucket.png" alt="Bucket">
+
             </div>
         </div>
 
@@ -83,8 +99,7 @@
         <script src="elementDrag.js"></script>
     </body>
 
-    <div id="footer-placeholder">
-    </div>
+    <div id="footer-placeholder"></div>
     <script>
         $.get("footer.html", function(data){
             $("#footer-placeholder").replaceWith(data);
