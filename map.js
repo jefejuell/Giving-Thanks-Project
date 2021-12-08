@@ -14,5 +14,13 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiamVmZWp1ZWxsIiwiYSI6ImNrdGZ6aTlpaTBkOWczMm5sM
                 })
             );
 
+            //Add map directions
+            map.addControl(
+                new MapboxDirections({
+                accessToken: mapboxgl.accessToken
+                }),
+                'top-left'
+                );
+                
             //Adds navigation controls
             map.addControl(new mapboxgl.NavigationControl());
