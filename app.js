@@ -1,3 +1,4 @@
+/*** Declare Variables ****/
 const quotes = [ 
     "Gratitude is much more than a verbal expression of thanks.  ~ Mary Baker Eddy",
     "Action expresses more gratitude than speech.  ~ Mary Baker Eddy",
@@ -35,7 +36,7 @@ const favoriteArea = document.querySelector(".favorite-container");
 const btnShare = document.querySelector(".btn-share");
 const gratCommentForm = document.querySelector(".form-comment");
 const gratEntry = document.getElementById("comment-entry");
-const nameComment = document.getElementById("name");
+const nameComment = document.getElementById("name-entry");
 const commentArea = document.querySelector(".comment-container");
 
 /*****Event Listeners*****/
@@ -72,8 +73,8 @@ function addItem(e) {
     } else {
         window.alert("Please enter gratitude.");
     }
-    resetDefaults();
     displayAlert("Gratitude added successfully. Please add a reason for this gratitude.", "success");
+    resetDefaults();
 }
 
 function addReason(e) {
@@ -88,8 +89,8 @@ function addReason(e) {
     } else {
         window.alert("Please enter reason.")
     }
-    resetDefaults();
     displayAlert("Reason added successfully", "success");
+    resetDefaults();
 }
 
 function showTitles() {
@@ -170,7 +171,7 @@ function addComment(e) {
     const gratComment = gratEntry.value;
     const username = nameComment.value;
     if (gratComment.length !=0) {
-        let element = document.createElement("article");
+        const element = document.createElement("article");
         element.classList.add("comment-item");
         element.innerHTML = `<p id=${username}>${gratComment} by ${username}</p>
         <div class = "btn-container">
@@ -183,7 +184,7 @@ function addComment(e) {
         </div>`
 
         commentArea.appendChild(element);
-        displayAlert("Thanks for sharing your thoughts", "success");
-        resetDefaults();
     }
+    displayAlert("Thanks for sharing your thoughts", "success");
+    resetDefaults();
 }
