@@ -21,7 +21,7 @@ const quotes = [
 ]
 const gratitudeForm = document.querySelector(".form-gratitude");
 const listInput = document.getElementById("gratitude-entry");
-const listArea = document.querySelector(".list-container");
+const gratitudeArea = document.querySelector(".gratitude-container");
 const btnSubmit = document.querySelector(".btn-submit");
 const alert = document.querySelector(".alert");
 const btnReset = document.querySelector(".btn-reset");
@@ -31,8 +31,12 @@ const reasonArea = document.querySelector(".reason-container");
 const btnQuote = document.querySelector(".btn-quote");
 const quoteArea = document.querySelector(".quote-container");
 const btnLike = document.querySelector(".btn-like");
-const favoriteArea = document.querySelector(".favorite-container")
-const btnShare = document.querySelector(".btn-share")
+const favoriteArea = document.querySelector(".favorite-container");
+const btnShare = document.querySelector(".btn-share");
+const gratCommentForm = document.querySelector(".form-comment");
+const gratEntry = document.getElementById("comment-entry");
+const nameComment = document.getElementById("name");
+const commentArea = document.querySelector(".comment-container");
 
 /*****Event Listeners*****/
 gratitudeForm.addEventListener("submit", addItem);
@@ -48,9 +52,11 @@ btnLike.addEventListener("click", e => {
     quoteLike();
 });
 
-btnShare.addEventListener("click", function(e) {
+gratCommentForm.addEventListener("submit", addComment);
 
-})
+// btnShare.addEventListener("click", function(e) {
+// })
+
 /****Functions******/
 function addItem(e) {
     e.preventDefault();
@@ -62,7 +68,7 @@ function addItem(e) {
         const element = document.createElement("article");
         element.classList.add("list-item");
         element.innerHTML = `<li class="title">${itemTitle}</li>`;
-        listArea.appendChild(element);
+        gratitudeArea.appendChild(element);
     } else {
         window.alert("Please enter gratitude.");
     }
@@ -96,6 +102,8 @@ function showTitles() {
 function resetDefaults() {
     listInput.value = "";
     reasonInput.value = "";
+    gratEntry.value = "";
+    nameComment = "";
 }
 
 function resetList() {
@@ -103,7 +111,7 @@ function resetList() {
     console.log(items);
     if (items.length > 0) {
         items.forEach(function (item) {
-            listArea.removeChild(item);
+            gratitudeArea.removeChild(item);
         });
     }
     const reasons = document.querySelectorAll(".reason-item");
@@ -119,6 +127,16 @@ function resetList() {
         });  
     
     displayAlert("Lists reset", "danger");
+}
+
+function displayAlert(text, action) {
+    alert.textContent = text;
+    alert.classList.add(`alert-${action}`);
+
+    setTimeout(function() {
+        alert.textContent = "";
+        alert.classList.remove(`alert-${action}`);
+    }, 3000);
 }
 
 function quoteDisplay() {
@@ -143,16 +161,29 @@ function quoteDisplay() {
 }
 
 function quoteLike() {
-let like = quoteArea.querySelector("quote-item");
-favoriteArea.appendChild(like);
+    let like = quoteArea.querySelector("quote-item");
+    favoriteArea.appendChild(like);
 }
 
-function displayAlert(text, action) {
-    alert.textContent = text;
-    alert.classList.add(`alert-${action}`);
+function addComment(e) { 
+    e.preventDefault();
+    const gratComment = gratEntry.value;
+    const username = nameComment.value;
+    if (gratComment.length !=0) {
+        let element = document.createElement("article");
+        element.classList.add("comment-item");
+        element.innerHTML = `<p id=${username}>${gratComment} by ${username}</p>
+        <div class = "btn-container">
+            <button type="button" class="btn-edit">
+                <i class = "fas fa-edit"></i>
+            </button>
+            <button type="button" class="btn-delete">
+                <i class = "fas fa-trash"></i>
+            </button>
+        </div>`
 
-    setTimeout(function() {
-        alert.textContent = "";
-        alert.classList.remove(`alert-${action}`);
-    }, 3000);
+        commentArea.appendChild(element);
+        displayAlert("Thanks for sharing your thoughts", "success");
+        resetDefaults();
+    }
 }

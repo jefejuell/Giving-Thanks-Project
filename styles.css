@@ -148,6 +148,32 @@ a:visited {
     margin-right: -50%;  
 }
 
+.btn-edit,
+.btn-delete {
+  background: transparent;
+  border-color: transparent;
+  cursor: pointer;
+  font-size: 0.7rem;
+  margin: 0 0.15rem;
+  transition: var(--transition);
+}
+.btn-edit {
+  color: var(--clr-green-light);
+}
+.btn-edit:hover {
+  color: var(--clr-green-dark);
+}
+.btn-delete {
+  color: var(--clr-red-light);
+}
+.btn-delete:hover {
+  color: var(--clr-red-dark);
+}
+
+#comment-gratitude {
+    background-color: lightskyblue;
+}
+
 .footer {
     height: 5vh;
     width: 100%;

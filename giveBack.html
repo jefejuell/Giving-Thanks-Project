@@ -12,8 +12,7 @@
     </head>
 
     <body>
-        <div id="nav-placeholder">
-        </div>
+        <div id="nav-placeholder"></div>
         <script>
             $.get("nav.html", function(data){
                 $("#nav-placeholder").replaceWith(data);
@@ -44,23 +43,24 @@
                 </ol>
             </div>
 
-                <div id="contactForm" style="background-color: lightskyblue;">
+            <div class="comment-container">
+                <div id="comment-gratitude">
                     <h2>Share ways you express gratitude:</h2>
-                    <!--User input (comment) email form.  The name and email fields are required
+                    <!--User input (comment) section. All fields are required
                     "Email.php"-->
-                    <form action="mailto:jefejuell@yahoo.com?subject=Comment?cc=Email" method="post" enctype="text/plain" id="contact" target="_blank">
-                        Name:<br>
-                        <input type="text" name="name" required><br><br>
-                        E-mail:<br>
-                        <input type="email" name="email" required><br><br>
-                        Comment:<br>
-                        <input type="text" name="comment" size="40" required><br><br>
+                    <form class="form-comment">
+                        Name:
+                        <input id="name" type="text" name="name" required><br>
+                        Comment:
+                        <input id="comment-entry" type="text" name="comment" size="40" required><br>
                         Mail me a copy:
                         <input type="checkbox" value="CopyMe"> 
-                        <input type="submit" value="Send" class="buttons">
-                        <input type="reset" value="Reset" class="buttons">
+                        <button type="submit" class="btn-comment" for="comment-entry">Submit</button>
+                        <button type="reset" class="btn-reset">Reset</button>
                     </form>
                 </div>
+
+            </div>
             
                 <div class="challenge-container">
                     <h2>Sign up for 7-day Gratitude Challenge!</h2>
