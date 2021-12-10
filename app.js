@@ -59,7 +59,7 @@ btnLike.addEventListener("click", e => {
     quoteLike();
 });
 
-gratCommentForm.addEventListener("submit", addComment);
+//gratCommentForm.addEventListener("submit", addComment);
 
 // btnShare.addEventListener("click", function(e) {
 // })
@@ -156,7 +156,6 @@ function quoteDisplay() {
     const quoteTotal = quotes.length;
     const quoteNum = Math.floor(Math.random()*quoteTotal);
     const quoteChoice = quotes[quoteNum];
-    console.log(quoteChoice);
     let element = document.createElement("article");
     element.classList.add("quote-item");
     // let quote = document.createTextNode("p");
@@ -168,10 +167,12 @@ function quoteDisplay() {
 }
 
 function quoteLike() {
-    let like = quoteArea.querySelector("quote-item");
+    let quoteItem = quoteArea.querySelector(".quote-item");
+    let like = quoteItem.innerHTML;
     favoriteArea.appendChild(like);
+    
 }
-
+/*
 function addComment(e) { 
     e.preventDefault();
     showTitles();
@@ -227,3 +228,4 @@ function restoreCommentDefaults () {
     nameComment.value = "";
     btnComment.textContent = "Submit";
 }
+*/
