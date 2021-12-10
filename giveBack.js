@@ -1,4 +1,5 @@
 /*** Declare Variables ****/
+const alert = document.querySelector(".alert");
 const gratCommentForm = document.querySelector(".comment-form");
 const btnComment = document.querySelector(".btn-comment");
 const gratEntry = document.getElementById("comment-entry");
