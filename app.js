@@ -109,8 +109,6 @@ function showTitles() {
 function resetDefaults() {
     listInput.value = "";
     reasonInput.value = "";
-    gratEntry.value = "";
-    nameComment = "";
 }
 
 function resetList() {
