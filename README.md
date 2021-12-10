@@ -10,15 +10,14 @@ To view GivTks, please visit https://jefejuell.github.io/Giving-Thanks-Project.
 ### **Iterations**
 1.0  Created app/website with pictures, quotes, and giving ideas.<br>
 1.1  Added Gratitude List prompts and sections, quote randomizer<br>
-1.2  <br><br>
-2.0  Added an interactive local Map, a Notices section with a Like button (React based) on the ContactUs page; Changed the layout to a responsive grid format<br>
-2.1  Added an email address submission, an embedded video<br>
-2.2  Added a eCommerce page (title is Logo Gear): includes Like buttons (React based), a NavBar that is responsive (toggles and stays at the top) using the Bootstrap library), page section links below the navbar<br>
+1.2  Added a NavBar that is responsive (toggles and stays at the top; uses the Bootstrap library)<br><br><br>
+1.3  Added a Footer that is componentized.
+2.0  Added an interactive local Map, a Notices section with a Like button (React based) on the ContactUs page; Page layouts use either CSS FlexBod or CSS Grid for responsive grid format<br>
+2.1  Added an email address submission for 7-Day Gratitude Challenge, an embedded short video<br>
+2.2  Added an comment option on the Contact Pageincludes Like buttons (React based), 
 2.3  Added a click an drag element (Bundle of sticks to pick up) on the home page.<br>
-Added an Email comment option on the Contact Page
-2.4  Added a Voting section for favorite logo gear (uses PHP script file), but need to test with PHP server.<br>
+2.4  Added a email share form for ways user's express gratitude (uses PHP script file), but need to test with PHP server.<br>
 (https://www.php.net/manual/en/features.commandline.webserver.php)
-2.5  Redesigned the Navbars, etc. for the webpages to have consistent styling
 
 ### **Roadmap of future improvements**
 Additional features will be added to: 
