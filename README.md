@@ -10,8 +10,8 @@ To view GivTks, please visit https://jefejuell.github.io/Giving-Thanks-Project.
 ### **Iterations**
 1.0  Created app/website with pictures, quotes, and giving ideas.<br>
 1.1  Added Gratitude List prompts and sections, quote randomizer<br>
-1.2  Added a NavBar that is responsive (toggles and stays at the top; uses the Bootstrap library)<br><br><br>
-1.3  Added a Footer that is componentized.
+1.2  Added a NavBar that is responsive (toggles and stays at the top; uses the Bootstrap library)<br>
+1.3  Added a Footer that is componentized.<br>
 2.0  Added an interactive local Map, a Notices section with a Like button (React based) on the ContactUs page; Page layouts use either CSS FlexBod or CSS Grid for responsive grid format<br>
 2.1  Added an email address submission for 7-Day Gratitude Challenge, an embedded short video<br>
 2.2  Added an comment option on the Contact Pageincludes Like buttons (React based), 
