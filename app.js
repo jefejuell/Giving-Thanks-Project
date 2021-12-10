@@ -167,7 +167,6 @@ function quoteLike() {
     showTitles();
     const quoteItem = document.querySelector(".quote-item");
     const quote = quoteItem.innerHTML;
-    console.log("quote");
     let favQuote = document.createElement("article");
     favQuote.classList.add("favorite-item");
     favQuote.innerHTML = `<p id=title><em>${quote}</em></p>
