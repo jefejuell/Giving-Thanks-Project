@@ -173,10 +173,9 @@ function quoteLike() {
     favQuote.innerHTML = `<p id=title><em>${quote}</em></p>
             <button type="button" class="btn-delete">Delete</button>`;
     const btnDelete = favQuote.querySelector(".btn-delete");
-    btnDelete.addEventListener("click", deleteQuote);
-        
+    btnDelete.addEventListener("click", deleteQuote);   
     favoriteArea.appendChild(favQuote);
-    // quoteDisplay();
+    displayAlert("Favorite added at bottom of page", "success");
 }
 
 function deleteQuote(e) {
