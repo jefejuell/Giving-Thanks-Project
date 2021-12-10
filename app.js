@@ -46,18 +46,18 @@ let editFlag = false;
 let editID = "";
 
 /*****Event Listeners*****/
-// gratitudeForm.addEventListener("submit", addItem);
+gratitudeForm.addEventListener("submit", addItem);
 
-// gratitudeReason.addEventListener("submit", addReason);
+gratitudeReason.addEventListener("submit", addReason);
 
-// btnReset.addEventListener("click", resetList);
+btnReset.addEventListener("click", resetList);
 
-// btnQuote.addEventListener("click", quoteDisplay);
+btnQuote.addEventListener("click", quoteDisplay);
 
-// btnLike.addEventListener("click", e => {
-//     e.currentTarget.classList.toggle("liked");
-//     quoteLike();
-// });
+btnLike.addEventListener("click", e => {
+    e.currentTarget.classList.toggle("liked");
+    quoteLike();
+});
 
 gratCommentForm.addEventListener("submit", addComment);
 
