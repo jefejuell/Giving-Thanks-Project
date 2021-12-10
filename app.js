@@ -158,18 +158,37 @@ function quoteDisplay() {
     element.classList.add("quote-item");
     // let quote = document.createTextNode("p");
     // element.appendChild(quote);
-
     element.innerHTML = `<h2><em>${quoteChoice}</em></h2>`;
     quoteArea.appendChild(element);
     btnLike.classList.remove("liked");
 }
 
 function quoteLike() {
-    let quoteItem = quoteArea.querySelector(".quote-item");
-    let like = quoteItem.innerHTML;
-    favoriteArea.appendChild(like);
-    
+    showTitles();
+    const quoteItem = document.querySelector(".quote-item");
+    const quote = quoteItem.innerHTML;
+    console.log("quote");
+    let favQuote = document.createElement("article");
+    favQuote.classList.add("favorite-item");
+    favQuote.innerHTML = `<p id=title><em>${quote}</em></p>
+            <button type="button" class="btn-delete">Delete</button>`;
+    const btnDelete = favQuote.querySelector(".btn-delete");
+    btnDelete.addEventListener("click", deleteQuote);
+        
+    favoriteArea.appendChild(favQuote);
+    // quoteDisplay();
 }
+
+function deleteQuote(e) {
+    const element = e.currentTarget.parentElement;
+    favoriteArea.removeChild(element);
+    if (favoriteArea.children.length == 0) {
+        const areaTitle = document.querySelector(".list-title");
+        areaTitle.classList.remove("show-title");
+    }
+    displayAlert("Item Removed", "danger");
+}
+
 /*
 function addComment(e) { 
     e.preventDefault();

@@ -25,7 +25,6 @@ function addComment(e) {
         const element = document.createElement("article");
         element.classList.add("comment-item");
         element.innerHTML = `<p id=${username}>"${gratComment}"  ~${username}</p>
-        
             <button type="button" class="btn-edit">Edit</button>
             <button type="button" class="btn-delete">Delete</button>`;
         const btnDelete = element.querySelector(".btn-delete");
