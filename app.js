@@ -34,24 +34,30 @@ const quoteArea = document.querySelector(".quote-container");
 const btnLike = document.querySelector(".btn-like");
 const favoriteArea = document.querySelector(".favorite-container");
 const btnShare = document.querySelector(".btn-share");
-const gratCommentForm = document.querySelector(".form-comment");
+const gratCommentForm = document.querySelector(".comment-form");
+const btnComment = document.querySelector(".btn-comment");
 const gratEntry = document.getElementById("comment-entry");
-const nameComment = document.getElementById("name-entry");
+const nameComment = document.getElementById("comment-name");
 const commentArea = document.querySelector(".comment-container");
 
+//edit option
+let editElement;
+let editFlag = false;
+let editID = "";
+
 /*****Event Listeners*****/
-gratitudeForm.addEventListener("submit", addItem);
+// gratitudeForm.addEventListener("submit", addItem);
 
-gratitudeReason.addEventListener("submit", addReason);
+// gratitudeReason.addEventListener("submit", addReason);
 
-btnReset.addEventListener("click", resetList);
+// btnReset.addEventListener("click", resetList);
 
-btnQuote.addEventListener("click", quoteDisplay);
+// btnQuote.addEventListener("click", quoteDisplay);
 
-btnLike.addEventListener("click", e => {
-    e.currentTarget.classList.toggle("liked");
-    quoteLike();
-});
+// btnLike.addEventListener("click", e => {
+//     e.currentTarget.classList.toggle("liked");
+//     quoteLike();
+// });
 
 gratCommentForm.addEventListener("submit", addComment);
 
@@ -168,23 +174,56 @@ function quoteLike() {
 
 function addComment(e) { 
     e.preventDefault();
-    const gratComment = gratEntry.value;
+    showTitles();
     const username = nameComment.value;
-    if (gratComment.length !=0) {
+    const gratComment = gratEntry.value;
+    if (!editFlag) {
         const element = document.createElement("article");
         element.classList.add("comment-item");
-        element.innerHTML = `<p id=${username}>${gratComment} by ${username}</p>
-        <div class = "btn-container">
-            <button type="button" class="btn-edit">
-                <i class = "fas fa-edit"></i>
-            </button>
-            <button type="button" class="btn-delete">
-                <i class = "fas fa-trash"></i>
-            </button>
-        </div>`
-
+        element.innerHTML = `<p id=${username}>"${gratComment}"  ~${username}</p>
+        
+            <button type="button" class="btn-edit">Edit</button>
+            <button type="button" class="btn-delete">Delete</button>`;
+        const btnDelete = element.querySelector(".btn-delete");
+        const btnEdit = element.querySelector(".btn-edit");
+        btnDelete.addEventListener("click", deleteComment);
+        btnEdit.addEventListener("click", editComment);
+        // Append (display) child below Comment form
         commentArea.appendChild(element);
+        restoreCommentDefaults();
+        displayAlert("Thanks for sharing your thoughts", "success");
+    } else {
+        editElement.innerHTML = `"${gratComment}"  ~${username}`;
+        editElement.id = username;
+        btnComment.textContent = "Submit"
+        restoreCommentDefaults();
+        displayAlert("Value changed", "success");
     }
-    displayAlert("Thanks for sharing your thoughts", "success");
-    resetDefaults();
+}
+
+function editComment(e) {
+    const element = e.currentTarget.parentElement;
+    editElement = e.currentTarget.previousElementSibling;
+    gratEntry.value = editElement.innerHTML;
+    nameComment.value = editElement.id;
+    editFlag = "true";
+    //editID = element.dataset.id;
+    btnComment.textContent = "Edit";
+}
+
+function deleteComment(e) {
+    const element = e.currentTarget.parentElement;
+    commentArea.removeChild(element);
+    if (commentArea.children.length == 0) {
+        const areaTitle = document.querySelector(".list-title");
+        areaTitle.classList.remove("show-title");
+    }
+    displayAlert("Item Removed", "danger");
+    restoreCommentDefaults();
+}
+
+function restoreCommentDefaults () {
+    gratEntry.value = "";
+    nameComment.value = "";
+    btnComment.textContent = "Submit";
 }
