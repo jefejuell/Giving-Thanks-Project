@@ -24,7 +24,8 @@ function addComment(e) {
     if (!editFlag) {
         const element = document.createElement("article");
         element.classList.add("comment-item");
-        element.innerHTML = `<p id=${username}>"${gratComment}"  ~${username}</p>
+        //Add info into element, including edit and delete buttons
+        element.innerHTML = `<p id=${username}>${gratComment}  ~${username}</p>
             <button type="button" class="btn-edit">Edit</button>
             <button type="button" class="btn-delete">Delete</button>`;
         const btnDelete = element.querySelector(".btn-delete");
@@ -36,22 +37,28 @@ function addComment(e) {
         restoreCommentDefaults();
         displayAlert("Thanks for sharing your thoughts", "success");
     } else {
-        editElement.innerHTML = `"${gratComment}"  ~${username}`;
+        editElement.innerHTML = `${gratComment}  ~${username}`;
         editElement.id = username;
         btnComment.textContent = "Submit"
         restoreCommentDefaults();
         displayAlert("Value changed", "success");
+        editFlag = false;
     }
 }
 
 function editComment(e) {
     const element = e.currentTarget.parentElement;
     editElement = e.currentTarget.previousElementSibling;
+    //TODO: Need to only include comment and not username in innerHTML
+    editElement = editElement.innerHTML.toString()
+    console.log(editElement.innerHTML);
     gratEntry.value = editElement.innerHTML;
     nameComment.value = editElement.id;
-    editFlag = "true";
+    console.log(nameComment);
+    editFlag = true;
     //editID = element.dataset.id;
     btnComment.textContent = "Edit";
+    //restoreCommentDefaults();
 }
 
 function deleteComment(e) {
